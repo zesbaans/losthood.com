@@ -35,10 +35,10 @@ const badges: StoreBadge[] = [
     <h1 class="title">
       <img
         class="app-icon"
-        src="/LostHood-180@3x.png"
+        src="/LostHood-1024.webp"
         alt="Lost Hood"
-        width="180"
-        height="180"
+        width="320"
+        height="320"
       />
     </h1>
     <div class="badges">
@@ -98,7 +98,7 @@ body {
 }
 
 .app-icon {
-  width: clamp(120px, 40vw, 180px);
+  width: clamp(160px, 60vw, 320px);
   height: auto;
   border-radius: 22.37%;
   box-shadow: 0 12px 40px rgb(0 0 0 / 0.35);
