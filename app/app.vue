@@ -2,6 +2,11 @@
 useHead({
   titleTemplate: (title) => (title ? `${title} — Lost Hood` : "Lost Hood"),
   htmlAttrs: { lang: "en" },
+  link: [
+    { rel: "icon", href: "/favicon.ico", sizes: "48x48" },
+    { rel: "icon", type: "image/png", href: "/favicon-32x32.png", sizes: "32x32" },
+    { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+  ],
 })
 </script>
 
