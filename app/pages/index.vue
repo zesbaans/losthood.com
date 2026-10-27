@@ -16,7 +16,7 @@ interface StoreBadge {
 
 const badges: StoreBadge[] = [
   {
-    url: undefined,
+    url: "https://apps.apple.com/app/lost-hood/id6743847271",
     image: "/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg",
     alt: "Download on the App Store",
   },
@@ -56,7 +56,11 @@ const badges: StoreBadge[] = [
           aria-disabled="true"
           title="Coming soon"
         >
-          <img :src="badge.image" :alt="`${badge.alt} (coming soon)`" height="56" />
+          <img
+            :src="badge.image"
+            :alt="`${badge.alt} (coming soon)`"
+            height="56"
+          />
         </span>
       </template>
     </div>

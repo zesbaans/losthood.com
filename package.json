@@ -1,5 +1,6 @@
 {
   "name": "losthood-com",
+  "type": "module",
   "version": "1.0.0",
   "main": ".output/server/index.mjs",
   "engines": {
