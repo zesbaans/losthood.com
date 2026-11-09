@@ -33,7 +33,7 @@ const badges: StoreBadge[] = [
     <h1 class="title">
       <img
         class="app-icon"
-        src="/LostHood-1024.webp"
+        src="/LostHood-1024.webp?v=2"
         alt="Lost Hood"
         width="320"
         height="320"
