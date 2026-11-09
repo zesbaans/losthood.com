@@ -11,6 +11,8 @@ useHead({
 interface StoreBadge {
   url?: string
   image: string
+  // Pixel-exact raster for standard-resolution screens, where the SVG blurs.
+  image1x?: string
   alt: string
 }
 
@@ -23,9 +25,13 @@ const badges: StoreBadge[] = [
   {
     url: "https://play.google.com/store/apps/details?id=nl.zesbaans.losthood",
     image: "/GetItOnGooglePlay_Badge_Web_color_English.svg",
+    image1x: "/GetItOnGooglePlay_Badge_Web_color_English-1x.png",
     alt: "Get it on Google Play",
   },
 ]
+
+const badgeSrcset = (badge: StoreBadge) =>
+  badge.image1x ? `${badge.image1x} 1x, ${badge.image} 2x` : undefined
 </script>
 
 <template>
@@ -48,7 +54,12 @@ const badges: StoreBadge[] = [
           target="_blank"
           rel="noopener"
         >
-          <img :src="badge.image" :alt="badge.alt" height="56" />
+          <img
+            :src="badge.image"
+            :srcset="badgeSrcset(badge)"
+            :alt="badge.alt"
+            height="56"
+          />
         </a>
         <span
           v-else
@@ -58,6 +69,7 @@ const badges: StoreBadge[] = [
         >
           <img
             :src="badge.image"
+            :srcset="badgeSrcset(badge)"
             :alt="`${badge.alt} (coming soon)`"
             height="56"
           />
